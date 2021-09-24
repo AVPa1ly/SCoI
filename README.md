@@ -8,9 +8,9 @@ You can track the progress via commits and version tags in main branch
 
 ## Accomplished labs
 
-- [X] Lab1 [v1.0](f8fd61c51d044fdadc4a9e56907c17517fea133c)
-- [X] Lab2 [v2.0]
-- [ ] Lab3
+- [X] Lab1 [v1.0](https://github.com/AVPa1ly/SCoI/releases/tag/v1.0)
+- [X] Lab2 [v2.0](https://github.com/AVPa1ly/SCoI/releases/tag/v2.0)
+- [X] Lab3 [v3.0](https://github.com/AVPa1ly/SCoI/releases/tag/v3.0)
 - [ ] Lab4
 - [ ] Lab5
 - [ ] Lab6
