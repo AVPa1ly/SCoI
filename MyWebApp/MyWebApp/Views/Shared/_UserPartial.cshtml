@@ -1,21 +1,41 @@
-﻿@await Component.InvokeAsync("Cart")
+﻿@using Microsoft.AspNetCore.Identity;
+@using MyWebApp.Entities;
+@inject SignInManager<ApplicationUser> singInManager
 
-<div class="dropdown ml-4 nav-color">
-    <div class="dropdown-toggle" id="dropdownMenuButton"
-         data-toggle="dropdown" aria-haspopup="true"
-         aria-expanded="false">
-        <img src="images/avatar.jpg" width="30"
-             alt="User" class="rounded" />
-    </div>
-    <div class="dropdown-menu"
-         aria-labelledby="dropdownMenuButton">
-        <div class="dropdown-item-text">
-            <img src="images/avatar.jpg" width="50"
+@if (singInManager.IsSignedIn(User))
+{
+    @await Component.InvokeAsync("Cart")
+
+    <div class="dropdown ml-4 nav-color">
+        <div class="dropdown-toggle" id="dropdownMenuButton"
+             data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">
+            <img src="@Url.Action("GetAvatar", "Image")" width="30"
                  alt="User" class="rounded" />
-            user@mail.ru
         </div>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" asp-controller="Product" asp-action="UserProducts">Мои товары</a>
-        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Выход</a>
+        <div class="dropdown-menu"
+             aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-item-text">
+                <img src="@Url.Action("GetAvatar", "Image")" width="50"
+                     alt="User" class="rounded" />
+                @User.Identity.Name
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" asp-controller="Product" asp-action="UserProducts">Мои товары</a>
+            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@ViewContext.HttpContext.Request.Path">
+                <input class="dropdown-item" type="submit" value="Выход" />
+            </form>
+        </div>
     </div>
-</div>
+}
+else 
+{
+<ul class="nav navbar-nav ml-auto">
+    <li>
+        <a class="nav-item nav-link" asp-area="Identity" asp-page="/Account/Login">Войти</a>
+    </li>
+    <li>
+        <a class="nav-item nav-link" asp-area="Identity" asp-page="/Account/Register">Зарегистрироваться</a>
+    </li>
+</ul>
+}
