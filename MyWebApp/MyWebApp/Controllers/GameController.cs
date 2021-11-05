@@ -21,9 +21,12 @@ namespace MyWebApp.Controllers
             SetUpData();
         }
         
-        public IActionResult Index(int pageNo=1)
+        public IActionResult Index(int? group, int pageNo=1)
         {
-            return View(ListViewModel<Game>.GetModel(_games, pageNo, _pageSize));
+            var gamesFiltered = _games.Where(d => !group.HasValue || d.GameGroupId == group.Value);
+            ViewData["Groups"] = _gameGroups;
+            ViewData["CurrentGroup"] = group ?? 0;
+            return View(ListViewModel<Game>.GetModel(gamesFiltered, pageNo, _pageSize));
         }
 
         /// <summary>
