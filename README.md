@@ -12,7 +12,7 @@ You can track the progress via commits and version tags in main branch
 - [X] Lab2 [v2.0](https://github.com/AVPa1ly/SCoI/releases/tag/v2.0)
 - [X] Lab3 [v3.0](https://github.com/AVPa1ly/SCoI/releases/tag/v3.0)
 - [X] Lab4 [v4.0](https://github.com/AVPa1ly/SCoI/releases/tag/v4.0)
-- [ ] Lab5
+- [X] Lab5 [v5.0](https://github.com/AVPa1ly/SCoI/releases/tag/v5.0)
 - [ ] Lab6
 - [ ] Lab7
 - [ ] Lab8
