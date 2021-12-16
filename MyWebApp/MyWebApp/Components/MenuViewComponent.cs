@@ -12,8 +12,8 @@ namespace MyWebApp.Components
         // Инициализация списка элементов меню 
         private List<MenuItem> _menuItems = new List<MenuItem>
         {
-            new MenuItem{Controller="Home", Action="Index", Text="Лб 5"},
-            new MenuItem{Controller="Game", Action="Index", Text="Каталог"}, //TODO: change controller name
+            new MenuItem{Controller="Home", Action="Index", Text="Лб 6"},
+            new MenuItem{Controller="Game", Action="Index", Text="Каталог"},
             new MenuItem{Controller="Admin", Action="Index", Text="Администрирование"},
         };
 
