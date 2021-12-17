@@ -21,7 +21,7 @@ namespace MyWebApp.Middleware
         public async Task Invoke(HttpContext context)
         {
             await _next.Invoke(context);
-            if (/*context.Response.StatusCode != StatusCodes.Status200OK*/true)
+            if (context.Response.StatusCode != StatusCodes.Status200OK)
             {
                 var path = context.Request.Path + context.Request.QueryString;
                 _logger.LogInformation($"Request {path} returns status code {context.Response.StatusCode.ToString()}");

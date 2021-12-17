@@ -27,7 +27,7 @@ namespace MyWebApp.Controllers
         }
         public IActionResult Index()
         {
-            ViewData["Text"] = "Лабораторная работа 7";
+            ViewData["Text"] = "Лабораторная работа 8";
             ViewData["Lst"] = new SelectList(_listDemo, "ListItemValue", "ListItemText");
             return View();
         }
