@@ -22,10 +22,10 @@
                     <img src="~/images/@item.Game.Image" alt="No image" width="150" />
                 </td>
                 <td>
-                    @Html.DisplayFor(m => item.Game.GameName);
+                    @Html.DisplayFor(m => item.Game.GameName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Quantity);
+                    @Html.DisplayFor(modelItem => item.Quantity)
                 </td>
                 <td>
                     <a asp-controller="Cart" asp-action="Delete" asp-route-id="@item.Game.GameId" class="btn btn-outline-danger">
