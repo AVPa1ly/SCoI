@@ -40,5 +40,11 @@ namespace MyWebApp.Controllers
             }
             return Redirect(returnUrl);
         }
+
+        public IActionResult Delete (int id)
+        {
+            _cart.RemoveFromCart(id);
+            return RedirectToAction("Index");
+        }
     }
 }
