@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyWebApp.Entities;
+using MyWebApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
