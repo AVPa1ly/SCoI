@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using MyWebApp.Extensions;
 using MyWebApp.Models;
 using System;
 using System.Collections.Generic;
@@ -9,9 +11,17 @@ namespace MyWebApp.Components
 {
     public class CartViewComponent : ViewComponent
     {
+        private Cart _cart;
+
+        public CartViewComponent(Cart cart)
+        {
+            _cart = cart;
+        }
+
         public IViewComponentResult Invoke()
         {
-            return View();
+            var cart = HttpContext.Session.Get<Cart>("cart");
+            return View(cart);
         }
     }
 }
