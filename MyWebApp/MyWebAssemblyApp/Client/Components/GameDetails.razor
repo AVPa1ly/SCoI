@@ -1,0 +1,22 @@
+﻿@if (Game!=null)
+{
+    <img src="@imageSrc" class="img-thumbnail" width="150" />
+    <div>
+        <p>@Game.GameName - @Game.Description</p>
+        <div class="badge badge-info">@Game.Cost руб</div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public DetailsViewModel Game { get; set; }
+    [Parameter]
+    public EventCallback<DetailsViewModel> GameChanged { get; set; }
+    string imageSrc
+    {
+        get
+        {
+            return $"images/{Game.Image}";
+        }
+    }
+}

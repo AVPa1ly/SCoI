@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebApp", "MyWebApp\MyWebApp.csproj", "{969E8AC4-3640-42C7-A67C-F7A13C491AB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebAssemblyApp.Server", "MyWebAssemblyApp\Server\MyWebAssemblyApp.Server.csproj", "{66259EB5-8A6F-4D93-AFBE-BF4ABB0064D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebAssemblyApp.Server", "MyWebAssemblyApp\Server\MyWebAssemblyApp.Server.csproj", "{66259EB5-8A6F-4D93-AFBE-BF4ABB0064D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebAssemblyApp.Client", "MyWebAssemblyApp\Client\MyWebAssemblyApp.Client.csproj", "{D1613DBA-2C24-44AD-9919-8D8ED77BDB6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebAssemblyApp.Client", "MyWebAssemblyApp\Client\MyWebAssemblyApp.Client.csproj", "{D1613DBA-2C24-44AD-9919-8D8ED77BDB6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebAssemblyApp.Shared", "MyWebAssemblyApp\Shared\MyWebAssemblyApp.Shared.csproj", "{3A5D6C68-E19A-4B21-956E-4FE56727EBFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebAssemblyApp.Shared", "MyWebAssemblyApp\Shared\MyWebAssemblyApp.Shared.csproj", "{3A5D6C68-E19A-4B21-956E-4FE56727EBFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

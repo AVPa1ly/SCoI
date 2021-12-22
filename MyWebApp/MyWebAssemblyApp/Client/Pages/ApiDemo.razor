@@ -1,0 +1,27 @@
+﻿@using MyWebAssemblyApp.Client.Components
+
+@page "/apidemo"
+@inject HttpClient client
+
+<div class="container">
+    <GamesList @bind-Games="@Games" SelectedObjectChanged="ShowDetails"></GamesList>
+    <GameDetails @bind-Game="@SelectedGame"></GameDetails>
+</div>
+
+@code {
+    [Parameter]
+    public IEnumerable<ListViewModel> Games { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Games = await client.GetFromJsonAsync<IEnumerable<ListViewModel>>("api/games");
+    }
+
+    [Parameter]
+    public DetailsViewModel SelectedGame { get; set; }
+
+    private async Task ShowDetails(int id)
+    {
+        SelectedGame = await client.GetFromJsonAsync<DetailsViewModel>($"api/games/{id}");
+    }
+}
